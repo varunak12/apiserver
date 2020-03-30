@@ -1,0 +1,11 @@
+---
+- become: true
+  remote_user: root
+  tasks:
+  - name: Copying svcstart.sh script to server
+    copy:
+       src: svcstart.sh 
+       dest: ~/
+   
+  - name: Execute the Script
+    command: sh ~/svcstart.sh 
